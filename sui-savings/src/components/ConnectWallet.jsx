@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getWallets, WalletProvider } from "@mysten/wallet-standard";
+import { getWallets } from "@mysten/wallet-standard";
 
 const ConnectWallet = ({ onWalletConnected }) => {
   const [wallets, setWallets] = useState([]);
@@ -23,11 +23,8 @@ const ConnectWallet = ({ onWalletConnected }) => {
 
   return (
     <div>
-      {wallet ? (
-        <p>Connected: {wallet.name}</p>
-      ) : (
-        <button onClick={connectWallet}>Connect Sui Wallet</button>
-      )}
+      <h2>Connect Wallet</h2>
+      <button onClick={connectWallet}>Connect</button>
     </div>
   );
 };

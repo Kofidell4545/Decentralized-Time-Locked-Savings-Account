@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { JsonRpcProvider, TransactionBlock } from "@mysten/sui.js/client";
+import { TransactionBlock } from "@mysten/sui.js/client";
 
 const SUI_RPC = "https://fullnode.testnet.sui.io"; // Sui Testnet RPC
 
@@ -11,7 +11,6 @@ const Deposit = ({ wallet }) => {
   const depositFunds = async () => {
     if (!wallet || !amount || !lockTime) return;
 
-    const provider = new JsonRpcProvider(SUI_RPC);
     const tx = new TransactionBlock();
 
     // Convert input values

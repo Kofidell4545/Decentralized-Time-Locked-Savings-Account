@@ -11,6 +11,8 @@ function App() {
     console.log("App Loaded");
   }, []);
 
+  console.log("Rendering App Component");
+
   return (
     <div style={{ textAlign: "center", padding: "20px", fontFamily: "Arial" }}>
       <h1>Sui Time-Locked Savings</h1>
@@ -22,7 +24,7 @@ function App() {
           <Withdraw wallet={wallet} />
         </>
       ) : (
-        <p>Connect your wallet to get started.</p>
+        <p>Please connect your wallet to proceed.</p>
       )}
     </div>
   );
